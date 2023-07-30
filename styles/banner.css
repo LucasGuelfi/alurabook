@@ -1,0 +1,64 @@
+.banner{
+    background:var(--azul-degrade);/*cor de fundo do banner*/
+    color: var(--branco);/*cor da fonte*/
+    text-align: center;/*centralizar texto*/
+    padding: 2.5em 2em; /*2.5 vezes 16 para espaçamento vertical, e 2 * 16 para espaço horizontal */
+}
+
+.banner__titulo{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.banner__texto{
+    font-weight: 500;/*fonte peso*/
+    margin: 1em 0; /*espaçamento */
+}
+
+.banner__pesquisa{
+    background-color: transparent;/*cor de fundo transparente*/
+    border: 1px solid var(--branco);/*expressuara borda / o tipo solida e a cor da borda*/
+    color: var(--branco);/* Cor da escrita branco*/
+    border-radius: 24px;/*arredondamento tamanho 24 px*/
+    padding: 1em;/*espaço entre a borda da barra de pesquisa*/
+    width: 100%;/*largura 100% tamanho da pagina*/
+}
+
+.banner__pesquisa::placeholder{/*colocar lupa na barra de pesquisa*/
+    color:var(--branco);/*cor da fonte*/
+    font-family:var(--fonte-principal);/*fonte poppins*/
+    font-size: 14px;/*tamanho fonte*/
+    font-weight: 400;/*fonte peso*/
+    text-align: center;/*alinhado para o centro*/
+    background: url("../img/lupa.svg") no-repeat;/* adicionado lupa, e solicitado para nao repetir imgaem.*/
+    background-position: 1em;/*posição da lupa*/
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
+        font-size: 36px;
+    }
+
+    .banner__pesquisa {
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 7em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .banner__pesquisa {
+        width: 35%;
+    }
+
+    .banner__pesquisa::placeholder {
+        background-position: 12em;
+    }
+
+    .banner {
+        padding: 6em 0;
+    }
+
+}
